@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Maruf</title>
+    <!-- MASTORSCDN -->
+    <link rel="stylesheet" href="https://surajit-singha-sisir.github.io/mastorsCDN/mastors.css">
+    <link rel="stylesheet" href="https://surajit-singha-sisir.github.io/mastorsCDN/mastorsIcons/mastorsIcons.css">
+    <script type="module" src="https://surajit-singha-sisir.github.io/mastorsCDN/mastors.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://surajit-singha-sisir.github.io/mastorsCDN/mastorsIcons/mastorsIcons.css">
+    <link href="https://fonts.cdnfonts.com/css/anek-latin" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar" id="myNavbar">
+        <section class="nav-container">
+            <a href="#" class="logo">Saif's Portfolio</a>
+            <div class="nav-items">
+                <span><a href="#home" class="active">Home</a><i class="m-home"></i></span>
+                <span><a href="#research">Research</a><i class="m-education"></i></span>
+                <span><a href="#publication">Publication</a><i class="m-book"></i></span>
+                <span><a href="#cv">CV</a><i class="m-user"></i></span>
+                <span><a href="#photo-gallery">Photo Gallery</a><i class="m-image"></i></span>
+                <span><a href="#contact">Contact</a><i class="m-mail1"></i></span>
+                <span><a href="#news">News</a><i class="m-news"></i></span>
+                <span><a href="#about">About</a><i class="m-info"></i></span>
+            </div>
+
+            <a href="javascript:void(0);" class="hamburger" onclick="toggleNavbar(this)">
+                <i class="m-m-hamburger"></i>
+            </a>
+
+        </section>
+        <div class="bg-dark" id="bg-dark"></div>
+    </nav>
+    <div class="fixed-gap-fill"></div>
+    <main class="main">
+        <section class="slider-container">
+            <div class="cover-bg">
+                <img src="Saif Uddin.png" alt="">
+            </div>
+            <div class="author-info-texts-header">
+                <h1>Curiosity drives discovery, turning questions into groundbreaking answers.</h1>
+                <p>I’m Saif Uddin Arif. This portfolio showcases my projects and highlights my skills. Explore my work
+                    to see my creativity and dedication.</p>
+                <a href="#" class="button"><button class="btn btn-outline-cold">View More</button></a>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Saif Uddin Arif, a web developer with a passion for creating beautiful and functional
+                websites.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium laboriosam eius nihil vero
+                    exercitationem, consequatur, porro quaerat neque perferendis dicta quidem mollitia reprehenderit
+                    adipisci earum a nesciunt debitis consectetur accusantium!</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptate molestiae natus autem,
+                    maxime
+                    quisquam quo praesentium totam explicabo voluptatibus quidem incidunt pariatur atque doloribus quasi
+                    obcaecati repellendus laboriosam! Veritatis.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:maruf@example.com">maruf@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Maruf. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    function toggleNavbar(hamb) {
+        const items = hamb.parentElement.querySelector(".nav-items");
+        const bgDark = document.getElementById("bg-dark");
+
+        if (items.classList.contains("navAnimation")) {
+            items.classList.remove("navAnimation");
+            items.classList.add("navExitAnimation");
+            bgDark.classList.remove("bgDarkAnimation");
+            bgDark.classList.add("bgDarkExitAnimation");
+        } else {
+            items.classList.remove("navExitAnimation");
+            items.classList.add("navAnimation");
+            bgDark.classList.remove("bgDarkExitAnimation");
+            bgDark.classList.add("bgDarkAnimation");
+
+            // Add a one-time event listener for clicks outside
+            document.addEventListener("click", (event) => {
+                if (
+                    !items.contains(event.target) &&
+                    !hamb.contains(event.target) &&
+                    bgDark.classList.contains("bgDarkAnimation")
+                ) {
+                    items.classList.remove("navAnimation");
+                    items.classList.add("navExitAnimation");
+                    bgDark.classList.remove("bgDarkAnimation");
+                    bgDark.classList.add("bgDarkExitAnimation");
+                }
+            }, { once: true });
+        }
+    }
+
+
+</script>
+
+</html>

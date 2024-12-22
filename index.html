@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://surajit-singha-sisir.github.io/mastorsCDN/mastorsIcons/mastorsIcons.css">
     <link href="https://fonts.cdnfonts.com/css/anek-latin" rel="stylesheet">
+    <script src="script.js"></script>
 
 </head>
 
@@ -20,23 +21,23 @@
         <section class="nav-container">
             <a href="#" class="logo">Saif's Portfolio</a>
             <div class="nav-items">
-                <span><a href="#home" class="active">Home</a><i class="m-home"></i></span>
-                <span><a href="#research">Research</a><i class="m-education"></i></span>
-                <span><a href="#publication">Publication</a><i class="m-book"></i></span>
-                <span><a href="#cv">CV</a><i class="m-user"></i></span>
-                <span><a href="#photo-gallery">Photo Gallery</a><i class="m-image"></i></span>
-                <span><a href="#contact">Contact</a><i class="m-mail1"></i></span>
-                <span><a href="#news">News</a><i class="m-news"></i></span>
-                <span><a href="#about">About</a><i class="m-info"></i></span>
+                <span><a href="index.html" class="active">Home</a><i class="m-home"></i></span>
+                <span><a href="research.html">Research</a><i class="m-education"></i></span>
+                <span><a href="publication.html">Publication</a><i class="m-book"></i></span>
+                <span><a href="cv.html">CV</a><i class="m-user"></i></span>
+                <span><a href="photo-gallery.html">Gallery</a><i class="m-image"></i></span>
+                <span><a href="contact.html">Contact</a><i class="m-mail1"></i></span>
+                <span><a href="news.html">News</a><i class="m-news"></i></span>
+                <span><a href="about.html">About</a><i class="m-info"></i></span>
             </div>
 
             <a href="javascript:void(0);" class="hamburger" onclick="toggleNavbar(this)">
                 <i class="m-m-hamburger"></i>
             </a>
-
         </section>
         <div class="bg-dark" id="bg-dark"></div>
     </nav>
+
     <div class="fixed-gap-fill"></div>
     <main class="main">
         <section class="slider-container">
@@ -51,7 +52,7 @@
             </div>
         </section>
 
-        <h2 class="text-center pad--10">Professional Experiences</h2>
+        <h2 class="text-left pad-tbr--10"><i class="m-chevron-right"></i> Professional Experiences</h2>
         <section class="prof-des">
             <aside>
                 <div class="professional-exp"><img class="img-w-res" src="Saif Uddin Arif2.jpg" alt=""></div>
@@ -102,65 +103,5 @@
         </div>
     </footer>
 </body>
-<script>
-    function toggleNavbar(hamb) {
-        const items = hamb.parentElement.querySelector(".nav-items");
-        const bgDark = document.getElementById("bg-dark");
-
-        if (items.classList.contains("navAnimation")) {
-            items.classList.remove("navAnimation");
-            items.classList.add("navExitAnimation");
-            bgDark.classList.remove("bgDarkAnimation");
-            bgDark.classList.add("bgDarkExitAnimation");
-        } else {
-            items.classList.remove("navExitAnimation");
-            items.classList.add("navAnimation");
-            bgDark.classList.remove("bgDarkExitAnimation");
-            bgDark.classList.add("bgDarkAnimation");
-
-            // Add a one-time event listener for clicks outside
-            document.addEventListener("click", (event) => {
-                if (
-                    !items.contains(event.target) &&
-                    !hamb.contains(event.target) &&
-                    bgDark.classList.contains("bgDarkAnimation")
-                ) {
-                    items.classList.remove("navAnimation");
-                    items.classList.add("navExitAnimation");
-                    bgDark.classList.remove("bgDarkAnimation");
-                    bgDark.classList.add("bgDarkExitAnimation");
-                }
-            }, { once: true });
-        }
-    }
-
-    // TOGGLE TO TOP
-    const scrollToTopButton = document.querySelector('#scrollToTop');
-
-    window.addEventListener('scroll', () => {
-        const documentHeight = document.documentElement.scrollHeight;
-        const viewportHeight = window.innerHeight;
-
-        const scrolled = document.documentElement.getBoundingClientRect().top * -1;
-        const scrollPercentage = (scrolled / (documentHeight - viewportHeight)) * 100;
-
-        if (scrollPercentage > 20) {
-            scrollToTopButton.classList.add('show');
-            scrollToTopButton.classList.remove('hide');
-        } else {
-            scrollToTopButton.classList.add('hide');
-            scrollToTopButton.classList.remove('show');
-        }
-    });
-
-    // Scroll to top on button click
-    scrollToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    });
-
-</script>
 
 </html>

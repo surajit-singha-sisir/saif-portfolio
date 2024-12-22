@@ -78,6 +78,9 @@
             <h2>Contact</h2>
             <p>You can reach me at <a href="mailto:maruf@example.com">maruf@example.com</a>.</p>
         </section>
+
+        <button id="scrollToTop" class="scroll-button">↑</button>
+
     </main>
 
     <footer>
@@ -116,6 +119,32 @@
         }
     }
 
+    // TOGGLE TO TOP
+    const scrollToTopButton = document.querySelector('#scrollToTop');
+
+    window.addEventListener('scroll', () => {
+        const documentHeight = document.documentElement.scrollHeight;
+        const viewportHeight = window.innerHeight;
+
+        const scrolled = document.documentElement.getBoundingClientRect().top * -1;
+        const scrollPercentage = (scrolled / (documentHeight - viewportHeight)) * 100;
+
+        if (scrollPercentage > 20) {
+            scrollToTopButton.classList.add('show');
+            scrollToTopButton.classList.remove('hide');
+        } else {
+            scrollToTopButton.classList.add('hide');
+            scrollToTopButton.classList.remove('show');
+        }
+    });
+
+    // Scroll to top on button click
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    });
 
 </script>
 

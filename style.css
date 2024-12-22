@@ -460,6 +460,7 @@ footer a:hover {
   object-fit: cover;
   object-position: center;
 }
+
 .slide-container .slider-textContainer {
   position: absolute;
   top: 0;
@@ -532,7 +533,6 @@ footer a:hover {
 }
 .research-body table {
   width: 100%;
-  display: table-cell;
   border-collapse: collapse;
 }
 
@@ -598,6 +598,7 @@ footer a:hover {
     transition: all 0.3s ease;
   }
   .text--xxl-res {
+    -webkit-text-fill-color: #fff;
     font-size: 1.5rem;
   }
   .research-body table td .table-td-div {
@@ -628,3 +629,111 @@ footer a:hover {
   }
 }
 /* RESEARCH END */
+
+/* PUBLICATION START */
+/* PUBLICATION */
+.slider-publication {
+  background-color: #000000;
+}
+.slide-container .slide-img-pub {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.slider-publication .publication-textContainer {
+  position: absolute;
+}
+.publication-textContainer h1 {
+  -webkit-text-fill-color: #b4b4b4;
+}
+.publication-textContainer p {
+  -webkit-text-fill-color: #b4b4b4;
+}
+.publication-textContainer .animationDown {
+  -webkit-text-fill-color: #b4b4b4;
+}
+
+/* TABLE */
+.publication-body table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.publication-body table th,
+.publication-body table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.table-td-div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  gap: 2rem;
+
+  text-align: justify;
+  text-align-last: start;
+}
+.table-td-div2 .pub-td-1,
+.table-td-div2 .pub-td-2,
+.table-td-div2 .pub-td-3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+.table-td-div2 hr {
+  height: 1px;
+  background-color: #ccc;
+  border: transparent;
+}
+.table-td-div2 .pub-td-2 span {
+  display: flex;
+  gap: 0.5rem;
+}
+.table-td-div2 .pub-td-2 tr:nth-child(2) {
+  font-style: italic;
+}
+.table-td-div2 a {
+  color: #007bff;
+}
+.table-td-div2 a:hover {
+  color: #0764c7;
+}
+.pub-table {
+  margin: 2rem 0;
+}
+.pub-table thead {
+  background-color: #dddddd;
+}
+.table-td-div2 .pub-td-1 p {
+  font-weight: 600;
+}
+.table-td-div2 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-td-div2 table tr td {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+.table-td-div2 table tr {
+  border: none;
+  padding: 0;
+}
+.table-td-div2 table:nth-child(1) tr:hover {
+  background-color: #f5f5f5;
+}
+
+.pub-td-2 table tr td:last-child {
+  padding-left: 1rem;
+}
+/* PUBLICATION END */

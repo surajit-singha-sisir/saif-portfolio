@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/k2d");
+
 /* FIXED CLASSES */
 :root {
   --navbg: #e6ebee;
@@ -439,3 +441,190 @@ footer a:hover {
     text-align: center;
   }
 }
+
+/* RESEARCH STARTED */
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  background-color: #f2f4f5;
+  overflow: hidden;
+}
+.slide-container .slide-img {
+  position: absolute;
+  left: 0;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.slide-container .slider-textContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.animationDown {
+  position: absolute;
+  display: block;
+  animation: animationDown 1s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  z-index: 5;
+}
+@keyframes animationDown {
+  0% {
+    top: 0;
+  }
+  40% {
+    top: 6px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.animationDown::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  aspect-ratio: 1;
+  border: 1px solid #ffaad5;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.animationDown:hover {
+  color: #000 !important;
+  animation-play-state: paused;
+}
+.animationDown:hover::after {
+  background-color: #ffffffd7;
+  transition: all 0.3s ease;
+}
+.text--xxl-res {
+  background: linear-gradient(45deg, #111111, #717171, #111111);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.k2d {
+  font-family: "k2d", sans-serif;
+}
+
+.research-body {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0;
+}
+.research-body table {
+  width: 100%;
+  display: table-cell;
+  border-collapse: collapse;
+}
+
+.research-body table th,
+.research-body table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.research-body table th {
+  background-color: #f2f2f2;
+}
+
+.research-body table tr:nth-child(odd) {
+  background-color: #fdfdfd;
+}
+
+.research-body table tr:hover {
+  background-color: #f8f8f8;
+}
+.research-body table td .table-td-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.research-body table td .table-td-div img {
+  width: 8rem;
+  border: 1px solid #e7e7e7;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+.research-body table td .table-td-div span {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.research-body table td .table-td-div span p:nth-child(1) {
+  font-weight: 600;
+}
+.research-body table td .table-td-div span p:nth-child(2) {
+  color: #363636;
+}
+/* .research-body table td .table-td-div p:nth-child(3) {
+  width: 100%;
+} */
+
+@media screen and (max-width: 768px) {
+  .slide-container {
+    height: 250px;
+  }
+  .slide-container .slider-textContainer {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #0000007d;
+    transition: all 0.3s ease;
+  }
+  .slider-textContainer .animationDown {
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .text--xxl-res {
+    font-size: 1.5rem;
+  }
+  .research-body table td .table-td-div {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .slide-container .slider-textContainer {
+    padding: 0.5rem;
+  }
+  /* TABLE */
+  .research-body table td .table-td-div {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+  }
+  .research-body table td .table-td-div img {
+    width: 100%;
+  }
+  .research-body table td .table-td-div span {
+    width: auto;
+  }
+}
+/* RESEARCH END */

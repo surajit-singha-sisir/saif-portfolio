@@ -833,5 +833,12 @@ footer a:hover {
   object-position: center;
   border-radius: 0.3rem;
 }
-
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    height: 200px;
+  }
+  .gallery-container .gall-overlay {
+    font-size: 1.5rem;
+  }
+}
 /* PHOTO GALLERY END */

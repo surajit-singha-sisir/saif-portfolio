@@ -58,4 +58,28 @@ window.onload = function () {
       behavior: "smooth",
     });
   });
+  galleryContainer();
 };
+
+function galleryContainer() {
+  const galleryContainer = document.querySelectorAll("aside.gallery-container");
+  galleryContainer.forEach((container) => {
+    const galleryMain = document.querySelector(".gallery-main");
+    const showcase = galleryMain.querySelector(".showcase");
+    const photoItems = galleryMain.querySelectorAll(".photo-item");
+
+    let currentIndex = 0;
+
+    function toggleActiveClass() {
+      currentIndex = (currentIndex + 1) % photoItems.length;
+      const leftPosition = -(currentIndex * 100);
+      showcase.style.left = `${leftPosition}%`;
+    }
+
+    if (showcase) {
+      const totalIndex = showcase.childElementCount;
+      showcase.style = `width: ${totalIndex * 100}%;`;
+      setInterval(toggleActiveClass, 5000);
+    }
+  });
+}

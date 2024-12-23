@@ -842,3 +842,17 @@ footer a:hover {
   }
 }
 /* PHOTO GALLERY END */
+
+/* CONTACT START */
+.contact-table {
+  width: auto;
+  border-collapse: collapse;
+}
+
+.contact-table td {
+  padding-top: 1rem;
+}
+.contact-table td:nth-child(2) {
+  padding-left: 0.5rem;
+}
+/* CONTACT END */

@@ -79,7 +79,7 @@ function galleryContainer() {
     if (showcase) {
       const totalIndex = showcase.childElementCount;
       showcase.style = `width: ${totalIndex * 100}%;`;
-      setInterval(toggleActiveClass, 5000);
+      setInterval(toggleActiveClass, 3000);
     }
   });
 }

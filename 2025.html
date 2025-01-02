@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watch</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        .header {
+            background: #1f1f1f;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .header h1 {
+            font-size: 1.8rem;
+            color: #f5c518;
+        }
+        .header nav {
+            display: flex;
+            gap: 15px;
+        }
+        .header nav a {
+            color: #fff;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .header nav a:hover {
+            background: #f5c518;
+            color: #000;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            background: #fff;
+            height: 3px;
+            width: 25px;
+            margin: 3px 0;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #1f1f1f;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .mobile-menu a {
+            padding: 10px 0;
+            border-top: 1px solid #444;
+        }
+
+        /* Responsive Header */
+        @media (max-width: 768px) {
+            .header nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: flex;
+            }
+        }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .movie {
+            background: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .movie:hover {
+            transform: scale(1.05);
+        }
+        .movie img {
+            width: 100%;
+            height: auto;
+        }
+        .movie .details {
+            padding: 10px;
+            text-align: center;
+        }
+        .movie h2 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .movie p {
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1f1f1f;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Movie Watch</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Genres</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="mobile-menu">
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Genres</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+
+    <!-- Movie Grid -->
+    <section class="movie-grid">
+        <section class="movie-grid">
+    <div class="movie">
+        <img src="https://dummyimage.com/200x300/f11111/ffffff&text=Movie+1" alt="Movie Poster">
+        <div class="details">
+            <h2>Movie Title 1</h2>
+            <p>Genre: Action</p>
+        </div>
+    </div>
+    <div class="movie">
+        <img src="https://dummyimage.com/200x300/f11111/ffffff&text=Movie+2" alt="Movie Poster">
+        <div class="details">
+            <h2>Movie Title 2</h2>
+            <p>Genre: Drama</p>
+        </div>
+    </div>
+    <div class="movie">
+        <img src="https://dummyimage.com/200x300/f11111/ffffff&text=Movie+3" alt="Movie Poster">
+        <div class="details">
+            <h2>Movie Title 3</h2>
+            <p>Genre: Comedy</p>
+        </div>
+    </div>
+    <div class="movie">
+        <img src="https://dummyimage.com/200x300/f11111/ffffff&text=Movie+4" alt="Movie Poster">
+        <div class="details">
+            <h2>Movie Title 4</h2>
+            <p>Genre: Sci-Fi</p>
+        </div>
+    </div>
+    <div class="movie">
+        <img src="https://dummyimage.com/200x300/f11111/ffffff&text=Movie+5" alt="Movie Poster">
+        <div class="details">
+            <h2>Movie Title 4</h2>
+            <p>Genre: Sci-Fi</p>
+        </div>
+    </div>
+    <div class="movie">
+        <img src="https://dummyimage.com/200x300/f11111/ffffff&text=Movie+6" alt="Movie Poster">
+        <div class="details">
+            <h2>Movie Title 4</h2>
+            <p>Genre: Sci-Fi</p>
+        </div>
+    </div>
+    <div class="movie">
+        <img src="https://dummyimage.com/200x300/f11111/ffffff&text=Movie+7" alt="Movie Poster">
+        <div class="details">
+            <h2>Movie Title 4</h2>
+            <p>Genre: Sci-Fi</p>
+        </div>
+    </div>
+</section>
+
+    </section>
+
+    <!-- Additional Content -->
+    <section class="about">
+        <div style="padding: 20px; text-align: center; background-color: #1f1f1f; margin: 20px; border-radius: 10px;">
+            <h2>About Movie Watch</h2>
+            <p>Movie Watch is your one-stop destination for discovering and keeping track of the latest and greatest movies. Browse through various genres and find your next favorite film today!</p>
+        </div>
+    </section>
+
+    <section class="latest-news">
+        <div style="padding: 20px; text-align: center; background-color: #1f1f1f; margin: 20px; border-radius: 10px;">
+            <h2>Latest News</h2>
+            <p>Stay updated with the latest news and trends in the movie industry. From blockbuster announcements to behind-the-scenes scoops, we cover it all.</p>
+        </div>
+    </section>
+
+    <section class="contact-us">
+        <div style="padding: 20px; text-align: center; background-color: #1f1f1f; margin: 20px; border-radius: 10px;">
+            <h2>Contact Us</h2>
+            <p>Have any questions or suggestions? Feel free to reach out to us anytime!</p>
+            <a href="#" style="color: #f5c518; font-weight: bold;">Send us a message</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Movie Watch. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

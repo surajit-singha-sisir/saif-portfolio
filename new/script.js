@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", ()=> {
+  serialNumberGet();
+});
 function toggleNavbar(hamb) {
   const items = hamb.parentElement.querySelector(".nav-items");
   const bgDark = document.getElementById("bg-dark");
@@ -81,5 +84,13 @@ function galleryContainer() {
       showcase.style = `width: ${totalIndex * 100}%;`;
       setInterval(toggleActiveClass, 3000);
     }
+  });
+}
+
+function serialNumberGet() {
+  const serialNumbers = document.querySelectorAll(".serialNumber");
+  serialNumbers.forEach((serialNumber, i) => {
+    const serialNumberValue = i + 1;
+    serialNumber.textContent = serialNumberValue;
   });
 }

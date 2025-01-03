@@ -635,15 +635,22 @@ footer a:hover {
   padding: 5rem 0;
 }
 .research-body table {
-  width: 100%;
   border-collapse: collapse;
 }
-
 .research-body table th,
 .research-body table td {
   padding: 1rem;
   border: 1px solid #ddd;
   text-align: center;
+}
+.research-body tr i {
+  color: #1ed818;
+}
+.research-body tr a {
+  text-decoration: underline;
+  text-decoration-color: #727272;
+  text-underline-offset: 5px;
+  font-size: 1.2rem;
 }
 
 .research-body table th {

@@ -549,16 +549,15 @@ footer a:hover {
 .slide-container {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 12rem;
   display: flex;
   align-items: center;
-  background-color: #f2f4f5;
+  background-color: #edf5f8;
   overflow: hidden;
 }
 .slide-container .slide-img {
   position: absolute;
   left: 0;
-  width: auto;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -619,9 +618,9 @@ footer a:hover {
   transition: all 0.3s ease;
 }
 .text--xxl-res {
-  background: linear-gradient(45deg, #111111, #717171, #111111);
+  /* background: linear-gradient(45deg, #111111, #717171, #111111);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   font-size: 2.5rem;
 }
 
@@ -1179,6 +1178,7 @@ footer a:hover {
   gap: 1rem;
   border: 1px solid #ccc;
   padding: 1rem;
+  text-align: center;
   border-radius: 0.5rem;
 }
 
@@ -1291,6 +1291,9 @@ footer a:hover {
   }
   .publication-textContainer p {
     -webkit-text-fill-color: #ebebeb;
+  }
+  .g-res-3-col-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 /* TEAM AND COLLABORATION */

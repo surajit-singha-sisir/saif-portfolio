@@ -1218,6 +1218,17 @@ footer a:hover {
   font-size: 1.2rem;
   color: #046ddd;
 }
+.scholarship-training {
+  position: relative;
+  font-size: 1.2rem;
+}
+.scholarship-training li {
+  list-style-type: disc;
+  padding: 1rem 0;
+}
+.training2 li {
+  list-style-type: square;
+}
 
 /* EDUCATION */
 

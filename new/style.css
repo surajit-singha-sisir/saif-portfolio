@@ -651,7 +651,7 @@ footer a:hover {
 .research-body table td {
   padding: 1rem;
   border: 1px solid #ddd;
-  text-align: center;
+  font-size: 1.2rem;
 }
 .research-body tr i {
   color: #1ed818;

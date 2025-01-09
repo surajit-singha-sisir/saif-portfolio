@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", ()=> {
+document.addEventListener("DOMContentLoaded", () => {
   serialNumberGet();
 });
 function toggleNavbar(hamb) {
@@ -88,9 +88,12 @@ function galleryContainer() {
 }
 
 function serialNumberGet() {
-  const serialNumbers = document.querySelectorAll(".serialNumber");
-  serialNumbers.forEach((serialNumber, i) => {
-    const serialNumberValue = i + 1;
-    serialNumber.textContent = serialNumberValue;
+  const tables = document.querySelectorAll(".research-body table");
+  tables.forEach((table) => {
+    const serialNumbers = table.querySelectorAll(".serialNumber");
+    serialNumbers.forEach((serialNumber, i) => {
+      const serialNumberValue = i + 1;
+      serialNumber.textContent = serialNumberValue;
+    });
   });
 }
